@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Handel Trade Co W.L.L</title>
+<style>
+    :root{--accent:#f2b516;--dark:#555760;--bg:#ffffff;--muted:#6b6b6b;--gray:#333;--yellow:#f2b516}
+    *{box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;margin:0;background:var(--bg);color:#111}
+    .container{max-width:1200px;margin:0 auto;padding:20px}
+    header.header{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:2px solid var(--yellow);background:#f7f7f7}
+    .logo img{height:70px}
+    .nav ul{display:flex;gap:18px;list-style:none;padding:0;margin:0}
+    .nav a{color:var(--gray);text-decoration:none;font-weight:600;position:relative}
+    .nav a::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:3px;background:var(--yellow);transition:.3s}
+    .nav a:hover::after{width:100%}
+    .lang-toggle{background:var(--yellow);border:none;padding:8px 12px;border-radius:6px;color:#111;font-weight:700;cursor:pointer}
+
+    /* Hero */
+    #hero{display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px;background:#222;color:#fff;background-size:cover;background-position:center;border-radius:12px}
+    #hero h2{font-size:40px;margin:0 0 10px;color:var(--yellow)}
+    #hero p{margin:0;font-size:20px;color:#eee}
+
+    /* Sections */
+    section h2{border-left:6px solid var(--yellow);padding-left:10px;color:var(--gray)}
+
+    /* Services */
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:30px}
+    .card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);border-top:5px solid var(--yellow);transition:.3s}
+    .card:hover{transform:translateY(-6px)}
+    .card h3{margin-top:0;color:var(--gray)}
+
+    /* Gallery */
+    #galleryGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
+    #galleryGrid img, #galleryGrid video{width:100%;height:220px;object-fit:cover;border-radius:10px;border:3px solid var(--yellow)}
+
+    /* Contact */
+    .contact{background:#f9f9f9;padding:18px;border-radius:10px;margin-top:20px;border-left:6px solid var(--yellow)}
+
+    footer{padding:18px;text-align:center;color:var(--muted);margin-top:30px;border-top:2px solid var(--yellow)}
+
+    /* RTL */
+    [dir="rtl"] .nav ul{flex-direction:row-reverse}
+
+    /* WhatsApp Button */
+    #waBtn{position:fixed;bottom:22px;right:22px;background:#25d366;padding:16px;border-radius:50%;box-shadow:0 4px 10px rgba(0,0,0,.2);cursor:pointer;z-index:999}
+
+    /* Slider */
+    .slider{position:relative;overflow:hidden;border-radius:12px;margin-top:20px}
+    .slides{display:flex;transition:.6s}
+    .slides img{width:100%;height:380px;object-fit:cover}
+    .arrow{position:absolute;top:50%;transform:translateY(-50%);padding:10px 14px;background:rgba(0,0,0,.4);color:#fff;border-radius:8px;cursor:pointer}
+    .arrow.left{left:10px}
+    .arrow.right{right:10px}
+</style>
+</head>
+<body>
+<header>
+ <div id="logo"><strong>Handel Trade Co W.L.L</strong></div>
+ <nav id="menu">
+   <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+   <a href="#about" data-en="About" data-ar="من نحن">About</a>
+   <a href="#products" data-en="Products" data-ar="المنتجات">Products</a>
+   <a href="#gallery" data-en="Gallery" data-ar="المعرض">Gallery</a>
+   <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+ </nav>
+ <button id="langToggle">AR</button>
+</header>
+
+<div class="hero" id="home">Your Vision, Our Craft</div>
+
+<div class="section" id="about">
+ <h2 data-en="About Us" data-ar="من نحن">About Us</h2>
+ <p data-en="We specialize in UPVC & Aluminum windows, doors, cabinets, and all types of custom glass fabrication." data-ar="نحن متخصصون في تصنيع نوافذ وأبواب UPVC والألمنيوم، الخزائن الخشبية والألمنيوم، وجميع أنواع الزجاج حسب الطلب."></p>
+</div>
+
+<div class="section" id="gallery">
+ <h2 data-en="Gallery" data-ar="المعرض">Gallery</h2>
+ <div class="slider">
+   <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
+   <img src="https://images.unsplash.com/photo-1582582425282-4e5c21b2c22a" />
+   <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02b6" />
+   <img src="https://images.unsplash.com/photo-1598300053657-8b3f1ecdbfc0" />
+ </div>
+</div>
+
+<div class="section">
+ <h2 data-en="Video Showcase" data-ar="عرض الفيديو">Video Showcase</h2>
+ <div class="videos">
+   <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+   <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+ </div>
+</div>
+
+<div class="section" id="contact">
+ <h2 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h2>
+ <p data-en="Phone: 60090082 / 60090083" data-ar="الهاتف: 60090082 / 60090083"></p>
+ <p data-en="Email: handel-t@hotmail.com" data-ar="البريد الإلكتروني: handel-t@hotmail.com"></p>
+ <p data-en="Address: Store No: B3-A6-04, GWC, Logistics Park-C, Qatar" data-ar="العنوان: المخزن رقم B3-A6-04، مركز الخدمات اللوجستية GWC، قطر"></p>
+</div>
+
+<a class="whatsapp" href="https://wa.me/97477784485">💬</a>
+
+<script>
+let isArabic = false;
+const toggle = document.getElementById('langToggle');
+toggle.addEventListener('click', () => {
+ isArabic = !isArabic;
+ document.querySelectorAll('[data-en]').forEach(el =>{
+   el.innerText = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+ });
+ toggle.innerText = isArabic ? 'EN' : 'AR';
+ document.body.style.direction = isArabic ? 'rtl' : 'ltr';
+});
+</script>
+
+<div id="waBtn" onclick="window.open('https://wa.me/97477784485','_blank')">💬</div>
+
+</body>
+</html>
